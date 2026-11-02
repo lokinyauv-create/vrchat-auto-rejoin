@@ -1,0 +1,11 @@
+# Only for people without VR Auto Launcher: install.sh --service
+[Unit]
+Description=VRChat auto-rejoin after connection drops
+
+[Service]
+ExecStart=%h/.local/bin/vrchat-auto-rejoin
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
